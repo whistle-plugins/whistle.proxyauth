@@ -1,0 +1,34 @@
+{
+  "name": "whistle.proxyauth",
+  "version": "1.0.0",
+  "description": "给whistle代理的请求设置用户名密码",
+  "scripts": {
+    "lint": "eslint index.js",
+    "lintfix": "eslint index.js --fix"
+  },
+  "homepage": "https://github.com/whistle-plugins/whistle.proxyauth",
+  "keywords": [
+    "whistle",
+    "authentication",
+    "auth"
+  ],
+  "registry": "https://github.com/whistle-plugins/whistle.proxyauth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whistle-plugins/whistle.proxyauth.git"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "peerDependencies": {
+    "whistle": ">= 1.12.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.2.0",
+    "eslint-config-imweb": "^0.2.10"
+  },
+  "dependencies": {
+    "lru-cache": "^4.1.3"
+  }
+}
