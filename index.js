@@ -27,7 +27,7 @@ exports.auth = (req, res) => {
   const authKey = `${ruleValue}\n${clientIp}`;
   if (!cache.get(authKey)) {
     const { authorization: auth1, 'proxy-authorization': auth2 } = req.headers;
-    if (!checkAuth(auth1, ruleValue) || (decodeBase64(RegExp.$1) !== ruleValue)) {
+    if (!checkAuth(auth1, ruleValue) && !checkAuth(auth2, ruleValue)) {
       req.setLogin(true);
       req.setHtml('Access denied, please <a href="javascript:;" onclick="location.reload()">try again</a>.');
       return false;
