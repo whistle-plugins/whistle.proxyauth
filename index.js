@@ -1,6 +1,5 @@
 const LRU = require('lru-cache');
 
-const AUTH_RE = /^\s*basic\s+(\S+)/i;
 const MAX_AGE = 1000 * 60 * 60;
 const MAX_AGE_RE = /@\d+$/;
 const cache = new LRU({ max: 10000, maxAge: MAX_AGE });
@@ -10,8 +9,8 @@ const checkAuth = (auth, value) => {
     return false;
   }
   auth = auth.substring(auth.indexOf(' ')).trim();
-  return auth && Buffer.from(str, 'base64').toString() === value;
-}
+  return auth && Buffer.from(auth, 'base64').toString() === value;
+};
 
 exports.auth = (req, res) => {
   let { ruleValue, clientIp } = req.originalReq;
@@ -34,5 +33,4 @@ exports.auth = (req, res) => {
     }
   }
   cache.set(authKey, 1, maxAge);
-  return res.end();
 };

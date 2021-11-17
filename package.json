@@ -6,6 +6,9 @@
     "lint": "eslint index.js",
     "lintfix": "eslint index.js --fix"
   },
+  "whistleConfig": {
+    "hideShortProtocol": true
+  },
   "homepage": "https://github.com/whistle-plugins/whistle.proxyauth",
   "keywords": [
     "whistle",
