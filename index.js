@@ -12,7 +12,7 @@ const checkAuth = (auth, value) => {
   return auth && Buffer.from(auth, 'base64').toString() === value;
 };
 
-exports.auth = (req, res) => {
+exports.auth = (req) => {
   let { ruleValue, clientIp } = req.originalReq;
   let maxAge = MAX_AGE;
   if (ruleValue && MAX_AGE_RE.test(ruleValue)) {
