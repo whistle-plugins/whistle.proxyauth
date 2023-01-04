@@ -16,9 +16,9 @@ pattern whistle.proxyauth://username:password@maxAgeMS
     - 如何升级whistle参见[帮助文档](http://wproxy.org/whistle/update.html)。
 2. 安装proxyauth插件，执行npm全局安装即可：
     ```
-    npm i -g whistle.proxyauth
+    w2 i whistle.proxyauth
     ```
-    > 如果是Linux或Mac，可能需要用 `sudo npm i -g whistle.proxyauth`，推荐使用[cnpm](https://github.com/cnpm/cnpm)或自己公司提供的npm镜像安装
+    > 推荐使用[cnpm](https://github.com/cnpm/cnpm)或自己公司提供的npm镜像安装：`w2 ci whistle.proxyauth`
 
 # 使用
 安装插件后，只需配置简单的规则：
