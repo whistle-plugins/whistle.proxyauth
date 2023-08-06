@@ -1,12 +1,13 @@
 {
   "name": "whistle.proxyauth",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "给whistle代理的请求设置用户名密码",
   "scripts": {
     "lint": "eslint index.js",
     "lintfix": "eslint index.js --fix"
   },
   "whistleConfig": {
+    "noOption": true,
     "hideShortProtocol": true
   },
   "homepage": "https://github.com/whistle-plugins/whistle.proxyauth",
