@@ -13,7 +13,10 @@ const checkAuth = (auth, value) => {
 };
 
 exports.auth = (req) => {
-  let { ruleValue, clientIp } = req.originalReq;
+  let { ruleValue, clientIp, fromComposer, globalPluginVars } = req.originalReq;
+  if (fromComposer && !globalPluginVars.includes('enableAuthComposer=true')) {
+    return;
+  }
   let maxAge = MAX_AGE;
   if (ruleValue && MAX_AGE_RE.test(ruleValue)) {
     const time = RegExp['$&'];
