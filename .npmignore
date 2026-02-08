@@ -29,6 +29,8 @@ build/Release
 # Dependency directories
 jspm_packages
 
+README-en_US.md
+
 # Optional npm cache directory
 .npm
 
